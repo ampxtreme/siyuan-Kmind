@@ -1,0 +1,23 @@
+{
+  "name": "Kmind",
+  "author": "suka",
+  "url": "https://github.com/suka233/siyuan-Kmind",
+  "version": "2.1.0",
+  "displayName": {
+    "default": "KMind",
+    "zh-CN": "KMind思维导图"
+  },
+    "description": {
+        "default": "KMind思维导图，支持悬浮预览思源块啦；",
+        "zh-CN": "KMind思维导图"
+    },
+  "readme": {
+    "default": "README.md",
+    "zh-CN": "README.md"
+  },
+  "funding": {
+    "custom": [
+      "https://wj.qq.com/s2/12591272/adf1/"
+    ]
+  }
+}
