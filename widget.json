@@ -2,14 +2,14 @@
   "name": "Kmind",
   "author": "suka",
   "url": "https://github.com/suka233/siyuan-Kmind",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "displayName": {
     "default": "KMind",
     "zh-CN": "KMind思维导图"
   },
   "description": {
-    "default": "KMind思维导图，支持悬浮预览思源块啦；",
-    "zh-CN": "KMind思维导图"
+    "default": "KMind思维导图，节点悬浮预览思源块，自动隐藏UI与自动黑暗模式；",
+    "zh-CN": "KMind思维导图，节点悬浮预览思源块，自动隐藏UI与自动黑暗模式；"
   },
   "readme": {
     "default": "README.md",
@@ -17,7 +17,7 @@
   },
   "funding": {
     "custom": [
-      "https://wj.qq.com/s2/12591272/adf1/"
+      "https://txc.qq.com/products/662653"
     ]
   }
 }
