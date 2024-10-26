@@ -4,12 +4,10 @@
   "url": "https://github.com/suka233/siyuan-Kmind",
   "version": "2.4.2",
   "displayName": {
-    "default": "KMind",
-    "zh-CN": "KMind思维导图"
+    "default": "KMind"
   },
   "description": {
-    "default": "KMind思维导图，节点悬浮预览思源块，自动隐藏UI与自动黑暗模式；",
-    "zh-CN": "KMind思维导图，节点悬浮预览思源块，自动隐藏UI与自动黑暗模式；"
+    "default": "KMind Mind Mapping, node hover preview of Siyuan blocks, automatic UI hiding and dark mode;"
   },
   "readme": {
     "default": "README.md",
@@ -21,3 +19,4 @@
     ]
   }
 }
+

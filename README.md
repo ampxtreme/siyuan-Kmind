@@ -1,245 +1,242 @@
-# 思源挂件：KMind
+# Siyuan Widget: KMind
 
-## 快速上手：/菜单->挂件->KMind
+## Quick Start: /Menu->Widget->KMind
 
-## \*\*KMind 插件版已经上架思源插件市场，欢迎大家前去下载
+## **KMind Plugin Version is now available at Siyuan Plugin Market, feel free to download**
 
-## QQ 交流群号：130584086
+## QQ Group: 130584086
 
-## 在线反馈：[https://txc.qq.com/products/662653]()
+## Online Feedback: [https://txc.qq.com/products/662653]()
 
-### 提醒：该挂件需要 KMind 插件的 api 支持，才能使用悬浮预览思源块的功能
+### Reminder: This widget requires KMind plugin API support to enable hovering preview of Siyuan blocks.
 
-### 基于下面这位大佬的导图库二次开发而成，感谢大佬[@wangling2](https://github.com/wanglin2)，
+### Based on the library developed by [@wangling2](https://github.com/wanglin2). If you find the mind map feature useful, consider [donating](https://wanglin2.github.io/mind-map-docs/sponsor.html) to the original library author to support further development.
 
-### 如果觉得导图功能还不错，欢迎[捐赠](https://wanglin2.github.io/mind-map-docs/sponsor.html)给导图库原作者，支持原作者继续开发
+## Latest Update Log:
 
-## 最新更新记录：
+### v2.4.2 (October 8, 2024)
 
-### v2.4.2（2024年10月8日）
+Fixes:
 
-修复：
+- Fixed the bug where non-Siyuan hyperlink types couldn't navigate properly.
 
-- 修复了非思源超链接类型的超链接无法正常跳转的bug
+### [v2.4.0 (October 5, 2024)](https://siyuannote.site/x/20241005113503-s68860l)
 
-### [v2.4.0（2024年10月5日）](https://siyuannote.site/x/20241005113503-s68860l)
+Description:
 
-说明：
+- Added the ability to directly create KMind documents in the Siyuan document tree. New node right-click to create Siyuan node sub-documents to adapt to MOC workflow.
 
-- 新增了直接在思源文档树中创建KMind文档的能力，新增节点右击创建思源节点子文档，以适配MOC流程~
+New Features:
 
-新增：
+- Now you can directly create KMind documents in the Siyuan document tree. Operation method: Right-click document tree -> Plugin -> KMind -> Create KMind Document (pro).
+- Added function to create associated Siyuan documents directly from nodes; Operation method: Select node -> Right-click node -> Click 'Node Sub-document' (pro).
 
-- 现在可以直接在思源文档树中创建KMind文档，操作方法：右键文档树 -> 插件 -> KMind -> 创建KMind文档（pro）
-- 新增节点直接创建关联思源文档功能；操作方法：选中节点 -> 右键节点 -> 点击 ‘节点子文档’（pro）
+Optimization & Fixes:
 
-优化 & 修复：
+- Optimized the handling of Siyuan hyperlinks in KMind, ensuring correct navigation to specified Siyuan blocks within Siyuan across mobile, docker, and PC platforms, avoiding the issue where clicking the hyperlink in docker would launch the PC client.
+- Fixed bug where the widget didn't automatically enter Zen mode during the initial render.
+- Optimized the display effect of KMind on mobile; currently view-only, editing is available on PC.
 
-- 优化KMind中对思源超链接的处理，现在无论是移动端，docker端，还是PC端，都能在思源内部正确的跳转到指定的思源块，不会出现docker端点击超链接，会拉起本机PC端的情况了
-- 修复挂件初次渲染的时候，没有自动进入禅模式的bug
-- 优化KMind在移动端的展示效果，目前仅可查看不可编辑，编辑请在PC端进行
+Known Issues:
 
-缺陷：
+- KMind's source file saving granularity is the entire document, so do not open the same KMind map simultaneously in the same space! This may lead to data overlap issues, including the following dangerous operations:
+  - Opening the same map on multiple devices (even simultaneous opening causes conflicts because KMind also stores view data in source files, and once you open and drag to view, the view data updates, causing discrepancies across devices).
+  - Splitting the screen horizontally or vertically with the same map.
+  - Other situations of simultaneously opening the same map.
+- When opening KMind documents from the document tree, if you switch to a second KMind document before the first one finishes loading, the first document will remain unloaded. Simply toggle the first document off and on to resolve (data is safe and won't be lost).
+- Due to the reasons mentioned above, mobile currently only has viewing functionality enabled.
 
-- 由于KMind的源文件保存粒度是整个文档保存，所以请不要在同一时空同时打开同一张KMind导图！否则会出现数据相互覆盖的情况，包括的危险操作如下：
-  - 多端打开同一张导图（是的，同时打开也会导致冲突，因为KMind还会存储视图数据到源文件中，一旦你打开了拖拽查看了的话，视图数据就会更新，这个时候，多端的数据就会不一致了）
-  - 向右 or 向下 分屏操作同一张导图
-  - 其它同时打开同一张导图的情况...
-- 打开文档树中的KMind文档的时候，如果第一个KMind文档没有加载完毕就切换到第二个KMind文档，那么第一个KMind文档会一直加载不了，这个时候重新开关一下第一个KMind文档就行了（数据是安全的，不会丢失）
-- 由于上面提到的原因，移动端目前仅开启查看功能
+### [v2.3.1 (September 29, 2024)](https://ld246.com/article/1727602784074)
 
-### [v2.3.1（2024年9月29日）](https://ld246.com/article/1727602784074)
+Description:
 
-说明：
+- Optimized the usage of the widget, improved the display effect of the widget and mirror block mask, optimized the display position of the bottom toolbar.
 
-- 优化了挂件的使用方式，优化了挂件和镜像块蒙版的展示效果，优化底部工具栏的展示位置
+New Features:
 
-新增：
+- Added a quick penetration mask function for the widget: hold the ctrl key + left-click the node to quickly focus on the node for direct editing.
+- Added Zen mode button to the bottom toolbar, making it accessible directly on mobile without calling out the right-click menu.
+- Added one-click jump-to-edit function for mirror blocks; click on the top right corner of the mirror block to jump to the source map for editing (pro).
 
-- 新增了挂件的快捷穿透蒙版功能：按住ctrl键+左键单击节点，可以快速聚焦节点，直接进行编辑
-- 底部工具栏新增禅模式按钮，现在移动端不必调出右键菜单就能直接进入禅模式了
-- 新增了镜像块的一键跳转编辑功能，点击镜像块的右上角，即可跳转到源导图进行编辑（pro）
+Optimization:
 
-优化：
+- Improved the display effect of the widget and mirror block mask, now only displaying mask hints when the mouse hovers over.
+- Optimized the position of the bottom toolbar, which now dynamically changes position as the sidebar expands, avoiding overlap.
 
-- 优化了挂件和镜像块蒙版的展示效果，现在只有鼠标划上去，才会展示蒙版提示
-- 优化底部工具栏的位置，现在会随着侧栏的展开而动态更改位置了，避免被覆盖
+### v2.3.0 (September 21, 2024)
 
-### v2.3.0（2024年9月21日）
+Description:
 
-说明：
+- Improved the display & usage of the widget when inserted into documents, adapted to dark mode, and synchronized some features and updates from the upstream library.
 
-- 优化了挂件插入文档的展示 & 使用方式，自适应黑暗模式，并同步了上游库的一些功能与更新
+New Features:
 
-新增：
+- Added mask: when inserting the widget into a Siyuan document, you need to click to enter KMind, display the operation UI, and start edit mode. When the mouse leaves the widget area, edit mode exits and UI hides to prevent accidental operations & capture of the main page scroll wheel.
+- UI interface automatically adapts to Siyuan's dark mode.
+- Custom watermark export.
 
-- 新增蒙版：当在思源文档中插入挂件的时候，需要您点击一下，才会进入kmind，显示操作UI并开始编辑模式，鼠标移出挂件区域，自动退出编辑模式并隐藏UI，防止误操作 & 捕获主页面滚轮
-- UI界面自动适配思源的黑暗模式
-- 导出水印自定义
+Others:
 
-其它：
+- Removed some log outputs, optimized performance.
 
-- 去除一些日志输出，优化性能
+### v2.2.0 (September 17, 2024)
 
-### v2.2.0（2024年9月17日）
+Description:
 
-说明：
+- Happy Mid-Autumn Festival~ This is the Mid-Autumn Special Edition.
 
-- 中秋快乐~此为中秋特别版
+New Features:
 
-新增：
+- When creating a new mind map, the sidebar operation bar is hidden by default.
 
-- 新建导图的时候，侧边操作栏默认隐藏；
+### v2.1.0 (September 4, 2024)
 
-### v2.1.0（2024年9月4日）
+Description:
 
-说明：
+- Refactoring completed, UI style, operation logic, and new features are consistent with the plugin. For detailed refactoring information, please see the KMind plugin description.
 
-- 重构完毕，UI风格，操作逻辑，新增的功能和插件保持一致，重构的具体细节请查看KMind插件的说明
+New Features:
 
-新增：
+- Updated the visual style of the icon, entry: Select node -> Icon -> Emoji icon.
 
-- 更新图标ICON的视觉风格，入口：选择节点->图标->表情图标
+Fixes:
 
-修复：
+- Fixed the bug where theme switching was not possible due to cross-version updates.
+- Fixed import issues.
+- Added missing font size 14.
 
-- 修复跨版本更新导致的无法切换主题的bug
-- 修复无法导入的bug
-- 加入缺少的14号字体
+### v2.0.0-beta.3 (April 7, 2024)
 
-### v2.0.0-beta.3（2024 年 4 月 7 日）
+Description:
 
-说明：
+- It's now relatively easy to use rainbow branches, optimizing aesthetics.
 
-- 可以比较方便的使用彩虹分支了，优化了一下美观度~。~
+Fixes:
 
-修复：
+- Fixed the bug where the node style settings sometimes couldn't update due to cross-version updates.
 
-- 修复跨版本更新导致的节点样式设置有时候无法更新的 bug
+New Features:
 
-新增：
+- Added mind map style settings, allowing customization of line style and color. Entry: left function bar of kmind -> mind map style.
+- Added rainbow branches (beta).
 
-- 新增导图样式设置，可以设置连线风格和颜色。入口，kmind 左边功能栏 -> 导图样式
-- 新增彩虹分支（beta）
+Others:
 
-其它：
+- Updated the underlying library -> 0.9.10.
 
-- 更新底层库->0.9.10
+### v2.0.0-beta.2 (March 31, 2024)
 
-### v2.0.0-beta.2（2024 年 3 月 31 日）
+Fixes:
 
-修复：
+- Fixed the bug where exporting to PDF became unavailable due to version updates. Note, if there are too many nodes, the exported PDF might lose some content. If this occurs, please provide feedback.
 
-- 更新版本导致的导出 pdf 不可用的 bug。注意，如果节点过多，导出 pdf 可能会丢失部分内容，如果遇到了此情况，请反馈给我
+### v2.0.0-beta.1 (March 9, 2024)
 
-### v2.0.0-beta.1（2024 年 3 月 9 日）
+Update Notes:
 
-更新说明：
+- Cross-version update of the underlying library, optimized code structure & performance, possibly with unknown bugs, feedback is welcome.
 
-- 底层库跨版本更新，优化了代码结构&性能，可能有未知 bug，欢迎大家反馈
+Breaking Update:
 
-破坏性更新：
+- Upgraded the underlying library -> version 0.9.8, due to design updates of connection lines, connection lines from old data will **not display**! However, it also fixed the bug where custom position saving of connection lines failed. Please upgrade with discretion.
 
-- 升级底层库 -> 0.9.8 版本，由于底层库的连接线设计更新，旧版数据的连接线会**无法显示**！但是同时修复了连接线的自定义位置保存失败的 bug。请酌情升级！
+New Features:
 
-新增：
+- Support for adding summaries to some sub-nodes of the same node.
+- Added missing font size 14.
 
-- 支持对同一个节点的部分子节点添加概要
-- 节点字号补上缺失的 14 号
+Fixes:
 
-修复：
+- Fixed the bug where node formatting would sometimes be lost.
 
-- 修复节点的格式有时候会丢失的 bug
+### v1.5.0 (February 18, 2024)
 
-### v1.5.0（2024 年 2 月 18 日）
+New Features:
 
-新增：
+- Added node search function, shortcut: `ctrl+f`, supporting text content search of nodes; Entry: sidebar toolbar -> search outline.
 
-- 新增搜索节点功能，快捷键：`ctrl+f`，支持搜索节点的文本内容；入口：侧边工具栏->搜索大纲
+### v1.4.0 (December 5, 2023)
 
-### v1.4.0（2023 年 12 月 5 日）
+Fixes:
 
-修复：
+- Fixed the bug where the outline failed when importing external mind map files.
 
-- 修复导入外部导图文件的时候，大纲失效的 bug
+Optimizations:
 
-优化：
+- Optimized the response speed of node activation, with toolbar buttons responding faster after clicking a node.
+- Optimized outline node clicking; now clicking nodes in the outline automatically activates the canvas and expands to the current active node.
 
-- 优化节点激活响应速度，点击节点后，工具栏按钮能更快的响应
-- 优化大纲点击节点，现在点击大纲中的节点，画布会自动激活并展开到当前激活的节点
+### v1.3.1 (October 17, 2023)
 
-### v1.3.1（2023 年 10 月 17 日）
+Fixes:
 
-修复：
+- Fixed the error when importing md files.
 
-- 修复导入 md 文件报错
+Optimizations:
 
-优化：
-
-- feat(style.css): 思源超链接添加 icon 功能优化：缩小选择器范围到思源块，避免匹配到插件生成的超链接
+- feat(style.css): Optimized Siyuan hyperlink icon function: narrowed selector range to Siyuan blocks to avoid matching hyperlinks generated by plugins.
 
 ### v1.3.0
 
-新增：
+New Features:
 
-- 新增导图小地图（缩略图）[#16](https://github.com/suka233/siyuan-Kmind/issues/16)
-- 新增导图只读模式（需要适配思源的文档只读状态吗？欢迎进群讨论：130584086）
-- 新增导图缩放工具条，支持双击缩放工具条重置缩放
+- Added mind map mini-map (thumbnail) [#16](https://github.com/suka233/siyuan-Kmind/issues/16).
+- Added mind map read-only mode (need to adapt to Siyuan's document read-only status? Join the group for discussion: 130584086).
+- Added mind map zoom toolbar, supporting double-clicking the zoom toolbar to reset zoom.
 
-优化：
+Optimizations:
 
-- 导入文件增加覆盖说明，避免误操作
+- Added overlay instructions for file import to avoid misoperations.
 
 ### v1.2.0
 
-变化：
+Changes:
 
-- 破坏性更新：去除了节点激活样式，改为默认支持节点 Hover 效果（鼠标悬浮在节点上，该节点的外框会高亮）
+- Breaking Update: Removed node activation style, changed to default support for node Hover effect (mouse hovering over a node highlights the outer frame).
 
-新增：
+New Features:
 
-- 支持**跨 kmind 复制粘贴节点**，现在，你可以把一个节点从挂件版直接复制粘贴到插件版啦，反过来也可以
-- 直接在节点上粘贴纯文本数据，会以当前剪贴板的数据新建子节点
-- 直接在节点上粘贴图片，会自动为该节点插入剪贴板中的图片
-- 新增了节点格式刷的功能：使用方法：点击一个节点 A，然后点击上方操作栏的 格式刷 按钮，再点击其它的节点，即可把节点 A 的样式应用到其它节点中。点击除了节点以外的地方会自动退出格式刷功能
-- 直接粘贴进节点的剪贴板文本，将会自动去除样式，只保留纯文本。如果需要保留复制的文本的样式，可以通过点击上方操作栏的 节点 按钮，在弹出的节点编辑器中进行粘贴。
-- 收起节点时，展开按钮会显示有多少个子节点
-- 支持关联线端点的位置跟随鼠标拖拽变化
-- 默认关闭双击复位画布
+- Support for **cross kmind copy-paste nodes**. Now, you can copy a node from the widget version and paste it directly into the plugin version, and vice versa.
+- Pasting plain text data directly onto a node will create a new sub-node with the current clipboard data.
+- Pasting images directly onto a node will automatically insert the clipboard image into that node.
+- Added node format brush feature: Usage method: Click a node A, then click the format brush button in the top operation bar, and click other nodes to apply the style of node A to others. Clicking anywhere other than nodes will automatically exit the format brush function.
+- Pasting clipboard text directly into a node will automatically remove styles, leaving only plain text. If you need to retain the style of the copied text, you can paste it into the node editor by clicking the Node button in the top operation bar.
+- When collapsing nodes, the expand button will display how many sub-nodes there are.
+- Support for endpoint position of connection lines to follow mouse drag changes.
+- Default closed double-click canvas reset.
 
-修复：
+Fixes:
 
-- 直接在根节点 ctrl+v 导致的 bug [#7](https://github.com/suka233/siyuan-kmind-plugin/issues/7)
+- Fixed the bug caused by ctrl+v on the root node [#7](https://github.com/suka233/siyuan-kmind-plugin/issues/7).
 
-## 历史更新记录[点我查看](https://github.com/suka233/siyuan-Kmind/blob/dev/CHANGELOG.md)
+## Historical Update Log [Click to View](https://github.com/suka233/siyuan-Kmind/blob/dev/CHANGELOG.md)
 
-### 此挂件已知缺陷：
+### Known Defects of This Widget:
 
-1.节点内直接粘贴图片后，下次进入该导图，此节点的图片可能会显示不出来，需要双击一下那个节点才能显示出来，建议使用上方操作按钮栏的图片按钮为节点添加图片
+1. After directly pasting an image into a node, the image might not display the next time you enter the mind map. You need to double-click the node to display it. It's recommended to use the image button in the top operation button bar to add images to nodes.
 
-### 注意：
+### Note:
 
-反馈此挂件的问题请不要去底层导图库反馈！！！我看不到不说，还会打扰到底层库作者，谢谢配合~
-此挂件为个人业余爱好所作，可能会有不稳定的风险，数据风险自负
+Please do not provide feedback on the underlying library for issues with this widget!!! I cannot see it, and it will disturb the author of the underlying library. Thank you for your cooperation. This widget is made as a personal hobby and may have stability risks, data risks at your own responsibility.
 
-使用 Github 快捷反馈[点我](https://github.com/suka233/siyuan-Kmind/issues)
-使用腾讯问卷快捷反馈 或者 捐赠[点我](https://wj.qq.com/s2/12591272/adf1/)
+Use Github for quick feedback [Click Here](https://github.com/suka233/siyuan-Kmind/issues).
+Use Tencent Questionnaire for quick feedback or donation [Click Here](https://wj.qq.com/s2/12591272/adf1/).
 
-### 特点：
+### Features:
 
-1.富文本节点，比较完善的功能，原作者的项目的完整功能[演示地址](https://wanglin2.github.io/mind-map/#/)
+1. Rich text nodes with relatively complete functionality. The full functionality of the original author's project [Demo Address](https://wanglin2.github.io/mind-map/#/).
 
-2.此挂件为精简版（主要没啥空添加所有功能），如果需要完整版，可以去原作者项目体验使用
+2. This widget is a simplified version (mainly due to lack of time to add all features). If you need the full version, you can experience it in the original author's project.
 
-3.原项目开启了 electron 分支，意味着可以跟思源一样，多端跨平台使用，只需要保存好此挂件导出的导图数据即可任意导入。
+3. The original project has an electron branch, meaning it can be used across multiple platforms like Siyuan, as long as you keep the mind map data exported by this widget properly saved, it can be imported anywhere.
 
-4.当节点插入的超链接为思源块链接的时候（例如 siyuan://xxxx），按住 alt+左键单击，即可弹出悬浮预览窗（需要 kmind 插件支持，请前往思源集市的插件区下载 kmind 插件版）
+4. When a hyperlink inserted in a node is a Siyuan block link (e.g., siyuan://xxxx), hold alt + left-click to pop up a hover preview window (requires KMind plugin support, please download the KMind plugin version from the Siyuan Market plugin area).
 ![kmindguide.gif](img%2Fkmindguide.gif)
 
-5.节点内部的文字可以链接到不同的思源块，并且思源超链接会展示思源的 icon，方便识别。
+5. Text inside nodes can link to different Siyuan blocks, and the Siyuan hyperlink will display Siyuan's icon for easy recognition.
 ![siyuanURL.gif](img%2FsiyuanURL.gif)
 
-6.节点的弹出编辑框支持有限的 markdown 语法，具体的支持列表如下：
+6. The popup editor inside nodes supports limited markdown syntax, the specific support list is as follows:
 
 ````
 # Headers
@@ -271,3 +268,4 @@ Fenced Code block
 --- Horizontal Rule
 
 ````
+
